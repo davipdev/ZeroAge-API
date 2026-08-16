@@ -4,7 +4,7 @@ export async function escanearURL(url) {
     try {
         const response = await fetch(url, {
             headers: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'},
-            signal: AbortSignal.timeout(8000)
+            signal: AbortSignal.timeout(5000)
         })
 
         const htmlint = await response.text()
